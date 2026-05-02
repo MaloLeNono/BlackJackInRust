@@ -2,6 +2,7 @@ mod card;
 mod deck;
 mod hand;
 
+use std::io::Read;
 use crate::deck::Deck;
 use crate::hand::Hand;
 
@@ -20,7 +21,7 @@ fn main() {
     dealer_hand.print(false);
 
     let mut running = true;
-    let handle = std::io::stdin();
+    let mut handle = std::io::stdin();
     let mut input = String::new();
     while running {
         input.clear();
@@ -72,4 +73,7 @@ fn main() {
             }
         }
     }
+
+    println!("Press enter to exit...");
+    let _ = handle.read(&mut [0u8]).unwrap();
 }
