@@ -69,7 +69,7 @@ fn main() {
                 }
             }
             _ => {
-                println!("Type etiher hit or stand.");
+                println!("Type either hit or stand.");
             }
         }
     }
