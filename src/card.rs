@@ -1,4 +1,4 @@
-﻿use strum::{IntoEnumIterator, EnumIter, Display};
+﻿use strum::{EnumIter, Display};
 
 #[derive(EnumIter, Copy, Clone, PartialEq, Display)]
 pub enum Suit {
